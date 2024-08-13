@@ -7,6 +7,7 @@ import {AppStackNavigationProps} from '../AppRouter.tsx';
 import {ErrorMessage} from '../components/ErrorMessage.tsx';
 import {useCities} from '../hooks/useCities.ts';
 import {SearchBar} from '../components/SearchBar.tsx';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const HomeScreen = () => {
   const cities = useCities();
@@ -15,16 +16,16 @@ export const HomeScreen = () => {
   const [search, setSearch] = useState('');
   const filteredForecast = useMemo(
     () =>
-      forecast.data?.data.list.filter(item =>
+      forecast.data?.list?.filter(item =>
         item.name.toLowerCase().includes(search.toLowerCase()),
       ),
     [forecast.data, search],
   );
 
   return (
-    <View style={[styles.container]}>
+    <SafeAreaView edges={['bottom']} style={[styles.container]}>
       <SearchBar onChange={setSearch} />
-      {forecast.isLoading && <ActivityIndicator />}
+      {forecast.isLoading && <ActivityIndicator testID="loading-indicator" />}
       {forecast.isSuccess && (
         <FlatList
           refreshing={forecast.isRefetching}
@@ -45,7 +46,7 @@ export const HomeScreen = () => {
           details={forecast.error.message}
         />
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 

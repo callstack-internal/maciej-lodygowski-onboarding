@@ -21,6 +21,7 @@ export const SearchBar: FC<SearchBarProps> = ({onChange}) => {
         value={value}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
+        testID="search"
         placeholder="Search city"
         style={[styles.input, paddingStandard]}
         onChangeText={text => {
