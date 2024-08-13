@@ -32,6 +32,7 @@ export const SearchBar: FC<SearchBarProps> = ({onChange}) => {
       <View style={[styles.icon]}>
         {isFocused ? (
           <TouchableOpacity
+            testID="clear-search"
             onPress={() => {
               onChange('');
               setValue('');

@@ -14,6 +14,7 @@ type WeatherListItemProps = {
 export const WeatherListItem: FC<WeatherListItemProps> = ({item, onPress}) => {
   return (
     <TouchableOpacity
+      testID={`${item.name.toLowerCase()}`}
       onPress={onPress}
       style={[styles.item, styles.row, paddingStandard, bottomBorder]}>
       <View style={[styles.content]}>
