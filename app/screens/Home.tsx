@@ -1,4 +1,4 @@
-import {ActivityIndicator, FlatList, StyleSheet, View} from 'react-native';
+import {ActivityIndicator, FlatList, StyleSheet} from 'react-native';
 import React, {useMemo, useState} from 'react';
 import {useLoadForecast} from '../hooks/useLoadForecast.ts';
 import {WeatherListItem} from '../components/WeatherListItem.tsx';

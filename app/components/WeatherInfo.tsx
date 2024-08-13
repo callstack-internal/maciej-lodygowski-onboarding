@@ -1,7 +1,7 @@
 import {Image, Text, View, StyleSheet} from 'react-native';
 import {Color} from '../styles/color.ts';
 import {ForecastItem} from '../services/types/Weather.ts';
-import {FC} from 'react';
+import React, {FC} from 'react';
 
 type WeatherInfoProps = {
   item: ForecastItem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {fireEvent, render, waitFor} from '@testing-library/react-native';
+import {fireEvent, render, screen} from '@testing-library/react-native';
 import {
   it,
   describe,
@@ -40,13 +40,13 @@ describe('HomeScreen Integration Tests', () => {
     (useCities as jest.Mock).mockReturnValue({data: ['Dubai']});
     mocks.use(loadForecastHandler);
 
-    const view = render(
+    render(
       <TestWrapper>
         <HomeScreen />
       </TestWrapper>,
     );
 
-    expect(view.getByTestId('loading-indicator')).toBeTruthy();
+    expect(screen.getByTestId('loading-indicator')).toBeTruthy();
   });
 
   it('should display forecast data when loading is successful', async () => {
@@ -55,32 +55,28 @@ describe('HomeScreen Integration Tests', () => {
     });
     mocks.use(loadForecastHandler);
 
-    const {getByText} = render(
+    render(
       <TestWrapper>
         <HomeScreen />
       </TestWrapper>,
     );
 
-    await waitFor(() => expect(getByText('Alaska')).toBeTruthy());
-    await waitFor(() => expect(getByText('Los Angeles')).toBeTruthy());
+    expect(await screen.findByText('Alaska')).toBeTruthy();
+    expect(await screen.findByText('Los Angeles')).toBeTruthy();
   });
 
   it('should display error message when forecast fetching fails', async () => {
     (useCities as jest.Mock).mockReturnValue({data: ['New York']});
     mocks.use(failForecastHandler);
 
-    const screen = render(
+    render(
       <TestWrapper>
         <HomeScreen />
       </TestWrapper>,
     );
 
-    await waitFor(() =>
-      expect(screen.getByText('Weather fetching failed')).toBeTruthy(),
-    );
-    await waitFor(() =>
-      expect(screen.getByText('Failed to fetch')).toBeTruthy(),
-    );
+    expect(await screen.findByText('Weather fetching failed')).toBeTruthy();
+    expect(await screen.findByText('Failed to fetch')).toBeTruthy();
   });
 
   it('should filter the list based on search input', async () => {
@@ -89,7 +85,7 @@ describe('HomeScreen Integration Tests', () => {
     });
     mocks.use(loadForecastHandler);
 
-    const screen = render(
+    render(
       <TestWrapper>
         <HomeScreen />
       </TestWrapper>,
@@ -99,7 +95,7 @@ describe('HomeScreen Integration Tests', () => {
 
     fireEvent.changeText(searchInput, 'Los');
 
-    await waitFor(() => expect(screen.getByText('Los Angeles')).toBeTruthy());
+    expect(await screen.findByText('Los Angeles')).toBeTruthy();
     expect(screen.queryByText('New York')).toBeNull();
   });
 });

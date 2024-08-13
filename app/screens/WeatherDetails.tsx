@@ -5,6 +5,7 @@ import {AppStackParamList} from '../AppRouter.tsx';
 import {Color} from '../styles/color.ts';
 import {ForecastRow} from '../components/ForecastRow.tsx';
 import {bottomBorder, paddingStandard} from '../styles/common.ts';
+import React from 'react';
 
 export const WeatherDetailsScreen = () => {
   const route = useRoute<RouteProp<AppStackParamList, 'Details'>>();

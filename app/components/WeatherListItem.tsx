@@ -1,5 +1,5 @@
 import {ForecastItem} from '../services/types/Weather.ts';
-import {FC} from 'react';
+import React, {FC} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Color} from '../styles/color.ts';
 import {ChevronRight} from '../assets/icons/ChevronRight.tsx';
