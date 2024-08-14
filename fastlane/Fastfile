@@ -1,10 +1,5 @@
 fastlane_version '2.53.1'
 
-before_all do
-  ensure_git_status_clean
-  git_pull
-end
-
 desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
     match(app_identifier: 'org.reactjs.native.example.weather-app', type: 'development', readonly: false)
