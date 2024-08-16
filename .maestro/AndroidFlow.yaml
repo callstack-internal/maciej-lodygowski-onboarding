@@ -1,0 +1,17 @@
+appId: com.weather_app
+---
+- launchApp
+- tapOn:
+    id: "kyiv"
+- assertVisible: "Kyiv"
+- tapOn: "Weather"
+- tapOn:
+    id: "search"
+- inputText: "Wroc"
+- assertVisible:
+    id: "wroclaw"
+- tapOn:
+    id: "clear-search"
+- hideKeyboard
+- assertVisible:
+    id: 'warsaw'

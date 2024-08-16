@@ -1,38 +1,12 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react-native';
-import {
-  it,
-  describe,
-  expect,
-  jest,
-  beforeAll,
-  afterAll,
-  afterEach,
-} from '@jest/globals';
+import {it, describe, expect, jest} from '@jest/globals';
 import {useCities} from '../app/hooks/useCities.ts';
 import {HomeScreen} from '../app/screens/Home.tsx';
-import {setupServer} from 'msw/native';
-import {RequestHandler} from 'msw';
 import {failForecastHandler, loadForecastHandler} from '../mocks/handlers.ts';
 import {TestWrapper} from './helpers/TestWrapper.tsx';
+import {setupAPIMocks} from './helpers/mock-api.ts';
 jest.mock('../app/hooks/useCities');
-
-const setupAPIMocks = (handlers: RequestHandler[]) => {
-  const server = setupServer(...handlers);
-  beforeAll(() => {
-    server.listen({onUnhandledRequest: 'warn'});
-  });
-
-  afterEach(() => {
-    server.resetHandlers();
-  });
-
-  afterAll(() => {
-    server.close();
-  });
-
-  return server;
-};
 
 describe('HomeScreen Integration Tests', () => {
   const mocks = setupAPIMocks([]);
