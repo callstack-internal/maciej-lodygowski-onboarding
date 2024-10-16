@@ -1,6 +1,6 @@
 import {jest} from '@jest/globals';
 export default {
-  getCurrentPosition: jest.fn((success: (result: any) => void, error) => {
+  getCurrentPosition: jest.fn((success: (result: any) => void) => {
     success({
       coords: {
         latitude: 37.7749,
