@@ -19,6 +19,7 @@ export const NavigationButton: FC<NavigationButtonProps> = ({
 
 const styles = StyleSheet.create({
   button: {
+    marginVertical: 4,
     backgroundColor: '#6099ff',
     padding: 8,
     borderRadius: 2,

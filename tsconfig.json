@@ -2,7 +2,8 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "app-info-package": ["./app-info-package"]
+      "app-info-package": ["./app-info-package"],
+      "conic-gradient-package": ["./conic-gradient-package"]
     }
   }
 }
