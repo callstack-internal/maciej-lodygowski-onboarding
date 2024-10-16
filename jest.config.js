@@ -6,4 +6,7 @@ module.exports = {
   ],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   testPathIgnorePatterns: ['<rootDir>/__tests__/helpers'],
+  moduleNameMapper: {
+    '\\.d\\.ts$': '<rootDir>/mocks/emptyModule.ts',
+  },
 };

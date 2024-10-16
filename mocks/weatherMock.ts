@@ -8,6 +8,12 @@ export const weatherMock = {
       main: {
         temp: 0,
       },
+      wind: {
+        speed: 4,
+      },
+      clouds: {
+        all: 10,
+      },
       weather: [
         {
           icon: 'snow',
