@@ -67,6 +67,12 @@ def enableProguardInReleaseBuilds = false
  * give correct results when using with locales other than en-US. Note that
  * this variant is about 6MiB larger per architecture than default.
  */
+
+def localPropertiesFile = rootProject.file("local.properties")
+def localProperties = new Properties()
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
 def jscFlavor = 'org.webkit:android-jsc:+'
 def MAPS_API_KEY = project.hasProperty('MAPS_API_KEY') ? MAPS_API_KEY : ""
 
@@ -86,7 +92,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        manifestPlaceholders = [appAuthRedirectScheme:'weather-app']
+        manifestPlaceholders = [appAuthRedirectScheme:'weather-app', MAPS_API_KEY: MAPS_API_KEY ?: ""]
     }
     signingConfigs {
         debug {

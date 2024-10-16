@@ -12,6 +12,10 @@ export const CustomModulesScreen = () => {
         onPress={() => navigation.navigate('AppInfo')}
         title="App info"
       />
+      <NavigationButton
+        onPress={() => navigation.navigate('ConicGradient')}
+        title="Conic gradient"
+      />
     </View>
   );
 };

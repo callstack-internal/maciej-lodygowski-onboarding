@@ -2581,6 +2581,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/slider@npm:^4.5.4":
+  version: 4.5.4
+  resolution: "@react-native-community/slider@npm:4.5.4"
+  checksum: a1e97773974ff24416f95332dc5f0e8befb9650ff309dd4a2f1e28603f493e2a7d158881d5cc50259967b2b36878cfe6ffd2c76670eb2798e9ce7cdf09306cf8
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.74.86":
   version: 0.74.86
   resolution: "@react-native/assets-registry@npm:0.74.86"
@@ -4419,6 +4426,12 @@ __metadata:
   checksum: 902a9f5d8967a3e2faf138d5cb784b9979bad2e6db5357c5b21c568df4ebe62bcb15108af1b2253744844eb964fc023fbd9afbbbb6ddd0bcc204c6fb5b7bf3af
   languageName: node
   linkType: hard
+
+"conic-gradient-package@link:./conic-gradient-package::locator=weather_app%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "conic-gradient-package@link:./conic-gradient-package::locator=weather_app%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "connect@npm:^3.6.5":
   version: 3.7.0
@@ -8995,12 +9008,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-storage@link:./modules/react-native-storage::locator=weather_app%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "react-native-storage@link:./modules/react-native-storage::locator=weather_app%40workspace%3A."
-  languageName: node
-  linkType: soft
-
 "react-native-svg@npm:^15.4.0":
   version: 15.7.1
   resolution: "react-native-svg@npm:15.7.1"
@@ -10691,6 +10698,7 @@ __metadata:
     "@openmobilehub/storage-googledrive": ^1.0.0-alpha.0
     "@react-native-async-storage/async-storage": ^2.0.0
     "@react-native-community/geolocation": ^3.3.0
+    "@react-native-community/slider": ^4.5.4
     "@react-native/babel-preset": 0.74.86
     "@react-native/eslint-config": 0.74.86
     "@react-native/metro-config": 0.74.86
@@ -10707,6 +10715,7 @@ __metadata:
     app-info-package: "link:./app-info-package"
     babel-jest: ^29.6.3
     babel-plugin-module-resolver: ^5.0.2
+    conic-gradient-package: "link:./conic-gradient-package"
     eslint: ^8.19.0
     eslint-plugin-testing-library: ^6.3.0
     fast-text-encoding: ^1.0.6
@@ -10723,7 +10732,6 @@ __metadata:
     react-native-permissions: ^4.1.5
     react-native-safe-area-context: ^4.10.8
     react-native-screens: ^3.33.0
-    react-native-storage: "link:./modules/react-native-storage"
     react-native-svg: ^15.4.0
     react-native-url-polyfill: ^2.0.0
     react-native-vector-icons: ^10.2.0

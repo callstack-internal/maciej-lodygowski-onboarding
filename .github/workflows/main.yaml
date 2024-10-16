@@ -64,6 +64,12 @@ jobs:
         run: |
           echo "OPEN_WEATHER_API_KEY=${{ secrets.OPEN_WEATHER_API_KEY }}" >> .env
           echo "API_URL=${{ secrets.API_URL }}" >> .env
+          echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> .env
+
+      - name: Create local.properties file
+        run: |
+          echo "MAPS_API_KEY=${{ secrets.MAPS_API_KEY }}" >> android/local.properties
+          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> android/local.properties
 
       - name: Install Dependencies
         run: yarn install

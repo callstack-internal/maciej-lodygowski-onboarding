@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "app-info-package",
+  "name": "conic-gradient-package",
   "version": "0.0.1",
   "description": "My awesome package",
   "react-native": "src",
@@ -11,7 +11,7 @@
     "src",
     "android",
     "ios",
-    "AppInfoPackage.podspec",
+    "ConicGradientPackage.podspec",
     "!android/build",
     "!ios/build",
     "!**/__tests__",
@@ -19,7 +19,7 @@
     "!**/__mocks__"
   ],
   "repository": "<repository-url>",
-  "author": "Maciej Łodygowski>",
+  "author": "Maciej Łodygowski",
   "license": "MIT",
   "homepage": "<homepage-url>",
   "peerDependencies": {
@@ -27,11 +27,11 @@
     "react-native": "*"
   },
   "codegenConfig": {
-    "name": "AppInfoPackage",
+    "name": "ConicGradientPackage",
     "type": "all",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.appinfopackage"
+      "javaPackageName": "com.conicgradientpackage"
     }
   }
 }

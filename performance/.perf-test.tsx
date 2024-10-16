@@ -1,13 +1,14 @@
 import {measureRenders} from 'reassure';
-import {describe, test} from '@jest/globals';
+import {describe, jest, test} from '@jest/globals';
 import {NavigationContainer} from '@react-navigation/native';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {setupAPIMocks} from '../__tests__/helpers/mock-api.ts';
 import {loadForecastHandler} from '../mocks/handlers.ts';
 import {fireEvent, screen} from '@testing-library/react-native';
 import {AppRouter} from '../app/AppRouter.tsx';
-import {AuthContext, AuthProvider} from '../app/context/AuthContext.tsx';
+import {AuthContext} from '../app/context/AuthContext.tsx';
 
+jest.useFakeTimers();
 describe('Performance tests', () => {
   const mocks = setupAPIMocks([loadForecastHandler]);
   test('Home screen performance', async () => {
