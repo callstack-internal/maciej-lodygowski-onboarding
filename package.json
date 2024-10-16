@@ -14,8 +14,8 @@
     "codegen:ios": "node node_modules/react-native/scripts/generate-codegen-artifacts.js --path . --outputPath ./ios -t ios"
   },
   "dependencies": {
-    "@openmobilehub/auth-core": "^1.0.4-alpha.0",
-    "@openmobilehub/auth-google": "^1.0.4-alpha.0",
+    "@openmobilehub/auth-core": "^1.0.6",
+    "@openmobilehub/auth-google": "^1.0.6",
     "@openmobilehub/maps-core": "^1.0.3",
     "@openmobilehub/maps-plugin-googlemaps": "^1.0.3",
     "@openmobilehub/maps-plugin-openstreetmap": "^1.0.3",
