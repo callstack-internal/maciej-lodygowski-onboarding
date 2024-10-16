@@ -9540,6 +9540,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"save-file-picker-package@link:./save-file-picker-package::locator=weather_app%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "save-file-picker-package@link:./save-file-picker-package::locator=weather_app%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "scheduler@npm:0.24.0-canary-efb381bbf-20230505":
   version: 0.24.0-canary-efb381bbf-20230505
   resolution: "scheduler@npm:0.24.0-canary-efb381bbf-20230505"
@@ -10737,6 +10743,7 @@ __metadata:
     react-native-vector-icons: ^10.2.0
     react-test-renderer: 18.2.0
     reassure: ^1.1.0
+    save-file-picker-package: "link:./save-file-picker-package"
     typescript: 5.0.4
     use-debounce: ^10.0.2
   languageName: unknown

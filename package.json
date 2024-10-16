@@ -44,6 +44,7 @@
     "react-native-svg": "^15.4.0",
     "react-native-url-polyfill": "^2.0.0",
     "react-native-vector-icons": "^10.2.0",
+    "save-file-picker-package": "link:./save-file-picker-package",
     "use-debounce": "^10.0.2"
   },
   "devDependencies": {
