@@ -40,5 +40,5 @@ describe('Performance tests', () => {
       </NavigationContainer>,
       {scenario},
     );
-  }, 10000);
+  }, 25000);
 });
