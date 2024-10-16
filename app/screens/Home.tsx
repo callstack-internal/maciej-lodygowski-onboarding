@@ -1,9 +1,5 @@
-import {Button, StyleSheet, FlatList, ActivityIndicator} from 'react-native';
-import {
-  requestLocationPermission,
-  getCurrentLocation,
-  ILocation,
-} from 'react-native-expose-location';
+import {StyleSheet, FlatList, ActivityIndicator, View} from 'react-native';
+
 import React, {useMemo, useState} from 'react';
 import {useLoadForecast} from '../hooks/useLoadForecast.ts';
 import {WeatherListItem} from '../components/WeatherListItem.tsx';
@@ -12,14 +8,12 @@ import {AppStackNavigationProps} from '../AppRouter.tsx';
 import {ErrorMessage} from '../components/ErrorMessage.tsx';
 import {useCities} from '../hooks/useCities.ts';
 import {SearchBar} from '../components/SearchBar.tsx';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {useLoadCurrentWeather} from '../hooks/useLoadCurrentWeather.ts';
+import {useCurrentLocation} from '../context/CurrentLocationContext.tsx';
 
 export const HomeScreen = () => {
   const cities = useCities();
-  const [currentLocation, setCurrentLocation] = useState<ILocation | null>(
-    null,
-  );
+  const {currentLocation} = useCurrentLocation();
   const currentWeather = useLoadCurrentWeather(currentLocation);
   const forecast = useLoadForecast(cities.data);
   const navigation = useNavigation<AppStackNavigationProps>();
@@ -31,20 +25,10 @@ export const HomeScreen = () => {
       ),
     [forecast.data, search],
   );
-
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.container]}>
+    <View style={[styles.container]}>
       <SearchBar onChange={setSearch} />
-      <Button
-        title="Get current location"
-        onPress={async () => {
-          const result = await requestLocationPermission();
-          if (result) {
-            const location = await getCurrentLocation();
-            setCurrentLocation(location);
-          }
-        }}
-      />
+
       {forecast.isLoading && <ActivityIndicator testID="loading-indicator" />}
       {currentWeather.isSuccess && (
         <WeatherListItem
@@ -72,7 +56,7 @@ export const HomeScreen = () => {
           details={forecast.error.message}
         />
       )}
-    </SafeAreaView>
+    </View>
   );
 };
 
