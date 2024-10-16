@@ -17,7 +17,7 @@ export const googleAuthClientConfig: PlatformAuthConfig = {
     scopes,
     clientId: CLIENT_ID,
     redirectUrl: `com.googleusercontent.apps.${
-      CLIENT_ID?.split('.')[0]
+      CLIENT_ID.split('.')[0]
     }:/oauth2redirect/google`,
   },
 };
