@@ -27,5 +27,8 @@ module.exports = {
     'conic-gradient-package': {
       root: path.resolve(__dirname, './conic-gradient-package'),
     },
+    'save-file-picker-package': {
+      root: path.resolve(__dirname, './save-file-picker-package'),
+    },
   },
 };

@@ -14,8 +14,8 @@
     "codegen:ios": "node node_modules/react-native/scripts/generate-codegen-artifacts.js --path . --outputPath ./ios -t ios"
   },
   "dependencies": {
-    "@openmobilehub/auth-core": "^1.0.4-alpha.0",
-    "@openmobilehub/auth-google": "^1.0.4-alpha.0",
+    "@openmobilehub/auth-core": "^1.0.6",
+    "@openmobilehub/auth-google": "^1.0.6",
     "@openmobilehub/maps-core": "^1.0.3",
     "@openmobilehub/maps-plugin-googlemaps": "^1.0.3",
     "@openmobilehub/maps-plugin-openstreetmap": "^1.0.3",
@@ -44,6 +44,7 @@
     "react-native-svg": "^15.4.0",
     "react-native-url-polyfill": "^2.0.0",
     "react-native-vector-icons": "^10.2.0",
+    "save-file-picker-package": "link:./save-file-picker-package",
     "use-debounce": "^10.0.2"
   },
   "devDependencies": {
