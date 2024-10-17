@@ -2286,7 +2286,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@openmobilehub/auth-core@npm:1.0.6, @openmobilehub/auth-core@npm:^1.0.4-alpha.0":
+"@openmobilehub/auth-core@npm:1.0.6, @openmobilehub/auth-core@npm:^1.0.6":
   version: 1.0.6
   resolution: "@openmobilehub/auth-core@npm:1.0.6"
   peerDependencies:
@@ -2297,7 +2297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@openmobilehub/auth-google@npm:^1.0.4-alpha.0":
+"@openmobilehub/auth-google@npm:^1.0.6":
   version: 1.0.6
   resolution: "@openmobilehub/auth-google@npm:1.0.6"
   dependencies:
@@ -10695,8 +10695,8 @@ __metadata:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
-    "@openmobilehub/auth-core": ^1.0.4-alpha.0
-    "@openmobilehub/auth-google": ^1.0.4-alpha.0
+    "@openmobilehub/auth-core": ^1.0.6
+    "@openmobilehub/auth-google": ^1.0.6
     "@openmobilehub/maps-core": ^1.0.3
     "@openmobilehub/maps-plugin-googlemaps": ^1.0.3
     "@openmobilehub/maps-plugin-openstreetmap": ^1.0.3
