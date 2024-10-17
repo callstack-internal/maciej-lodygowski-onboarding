@@ -11,7 +11,8 @@
     "build:android": "fastlane android build",
     "build:ios": "fastlane ios build",
     "codegen:android": "./android/gradlew -p android generateCodegenArtifactsFromSchema",
-    "codegen:ios": "node node_modules/react-native/scripts/generate-codegen-artifacts.js --path . --outputPath ./ios -t ios"
+    "codegen:ios": "node node_modules/react-native/scripts/generate-codegen-artifacts.js --path . --outputPath ./ios -t ios",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@openmobilehub/auth-core": "^1.0.6",
@@ -31,6 +32,7 @@
     "app-info-package": "link:./app-info-package",
     "conic-gradient-package": "link:./conic-gradient-package",
     "fast-text-encoding": "^1.0.6",
+    "lottie-react-native": "^7.0.0",
     "range-slider-package": "link:./range-slider-package",
     "react": "18.2.0",
     "react-native": "0.74.4",
@@ -65,6 +67,7 @@
     "eslint-plugin-testing-library": "^6.3.0",
     "jest": "^29.6.3",
     "msw": "latest",
+    "patch-package": "^8.0.0",
     "prettier": "2.8.8",
     "react-native-dotenv": "^3.4.11",
     "react-test-renderer": "18.2.0",
@@ -74,5 +77,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@4.0.2"
 }
