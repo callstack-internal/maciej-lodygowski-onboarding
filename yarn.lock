@@ -2581,13 +2581,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/slider@npm:^4.5.4":
-  version: 4.5.4
-  resolution: "@react-native-community/slider@npm:4.5.4"
-  checksum: a1e97773974ff24416f95332dc5f0e8befb9650ff309dd4a2f1e28603f493e2a7d158881d5cc50259967b2b36878cfe6ffd2c76670eb2798e9ce7cdf09306cf8
-  languageName: node
-  linkType: hard
-
 "@react-native/assets-registry@npm:0.74.86":
   version: 0.74.86
   resolution: "@react-native/assets-registry@npm:0.74.86"
@@ -3123,20 +3116,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^22.5.5":
-  version: 22.7.5
-  resolution: "@types/node@npm:22.7.5"
+  version: 22.7.6
+  resolution: "@types/node@npm:22.7.6"
   dependencies:
     undici-types: ~6.19.2
-  checksum: 1a8bbb504efaffcef7b8491074a428e5c0b5425b0c0ffb13e7262cb8462c275e8cc5eaf90a38d8fbf52a1eeda7c01ab3b940673c43fc2414140779c973e40ec6
+  checksum: 6afe2a1bd70ee0afa76c904ffdb04c634366987103bb2bef2d5b036f3bb49a4e828bb5e9fc64af442a76aaac4896df9277e725c843d85375d135aa71eb2fe3d9
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.0.0":
-  version: 18.19.55
-  resolution: "@types/node@npm:18.19.55"
+  version: 18.19.56
+  resolution: "@types/node@npm:18.19.56"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 943d57804dfe2b65fc8b5522b4aba49da0627f914381dbe01ecfc0867c2bc218cc7fa363a64cf8152830bf7ba252a9010c72302841e3a0ee8dd310543d3c46d6
+  checksum: 2660aa2e50ddb77e4ea4e29e6b917e942ca49ecbd46b6333a7aeffdffafc5d7e48f8a731b6570a61bebdd0ba8dc104a250c432bea00e70aec5a4cb6e6f2df771
   languageName: node
   linkType: hard
 
@@ -4820,9 +4813,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.28":
-  version: 1.5.39
-  resolution: "electron-to-chromium@npm:1.5.39"
-  checksum: cd3b644c20f30fc1c393168bafa0e42a3dde576129603266ab61248b76a36837084073895a845676f8fe90dbb31d385bbef53901b60381f3ae82b40a5bece352
+  version: 1.5.40
+  resolution: "electron-to-chromium@npm:1.5.40"
+  checksum: 6b2f30313dcbfadfae5434fed24633d6d1dc02f3546292b1ce77ed27474785101ad5e9ca74557b264872298571c02ec390c3d0037c4f330d3cdf7259487341f6
   languageName: node
   linkType: hard
 
@@ -5629,9 +5622,9 @@ __metadata:
   linkType: hard
 
 "flow-parser@npm:0.*":
-  version: 0.248.1
-  resolution: "flow-parser@npm:0.248.1"
-  checksum: 6773d567ee731312fe58ec97353415f963d6c1c59458fbbc2f42315eb458e0702f9be9cf2e7d88fc1d7d08d11adb75e27b1622ef2e78afb8fc792a9b7a18a734
+  version: 0.249.0
+  resolution: "flow-parser@npm:0.249.0"
+  checksum: e05c8fdda1a8520c1e5a4fb1e5cfb81fa6d4202d498eedbc885fe1b531a0005faf995cd658a4097079d32d4f0afbeae8b4e10f578d941dc816d88ae930bd3f78
   languageName: node
   linkType: hard
 
@@ -8622,9 +8615,9 @@ __metadata:
   linkType: hard
 
 "picocolors@npm:^1.0.0, picocolors@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "picocolors@npm:1.1.0"
-  checksum: a64d653d3a188119ff45781dfcdaeedd7625583f45280aea33fcb032c7a0d3959f2368f9b192ad5e8aade75b74dbd954ffe3106c158509a45e4c18ab379a2acd
+  version: 1.1.1
+  resolution: "picocolors@npm:1.1.1"
+  checksum: e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
   languageName: node
   linkType: hard
 
@@ -8869,6 +8862,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"range-slider-package@link:./range-slider-package::locator=weather_app%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "range-slider-package@link:./range-slider-package::locator=weather_app%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "react-devtools-core@npm:^5.0.0":
   version: 5.3.2
   resolution: "react-devtools-core@npm:5.3.2"
@@ -8986,12 +8985,12 @@ __metadata:
   linkType: hard
 
 "react-native-safe-area-context@npm:^4.10.8":
-  version: 4.11.0
-  resolution: "react-native-safe-area-context@npm:4.11.0"
+  version: 4.11.1
+  resolution: "react-native-safe-area-context@npm:4.11.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 6d6af265ecf1b9cb45e042a335f2c5da472ad41eb5d4fda8e31a1607b344726f0f4f9501ef3a3a731cec3784ba93485b44cbdafbf5f13055caa130c703bbd307
+  checksum: fddb4c72c8ec404602317a3d52c555a5f4173dcb94d8403c8368fb8a556ad41741f87419e052fa26e55a80732abb144f16bb6475d808dff392da5480ff7ec813
   languageName: node
   linkType: hard
 
@@ -10200,8 +10199,8 @@ __metadata:
   linkType: hard
 
 "terser@npm:^5.15.0":
-  version: 5.35.0
-  resolution: "terser@npm:5.35.0"
+  version: 5.36.0
+  resolution: "terser@npm:5.36.0"
   dependencies:
     "@jridgewell/source-map": ^0.3.3
     acorn: ^8.8.2
@@ -10209,7 +10208,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: 1d48ad776e690582e52b952e06376d50999809235e1fef5bc759e12f2d09b4ec5ab09895682c988e9a3115e6968319eba93bed0cbaea7c4fa08b8a015dedd5a4
+  checksum: 489afd31901a2b170f7766948a3aa0e25da0acb41e9e35bd9f9b4751dfa2fc846e485f6fb9d34f0839a96af77f675b5fbf0a20c9aa54e0b8d7c219cf0b55e508
   languageName: node
   linkType: hard
 
@@ -10704,7 +10703,6 @@ __metadata:
     "@openmobilehub/storage-googledrive": ^1.0.0-alpha.0
     "@react-native-async-storage/async-storage": ^2.0.0
     "@react-native-community/geolocation": ^3.3.0
-    "@react-native-community/slider": ^4.5.4
     "@react-native/babel-preset": 0.74.86
     "@react-native/eslint-config": 0.74.86
     "@react-native/metro-config": 0.74.86
@@ -10728,6 +10726,7 @@ __metadata:
     jest: ^29.6.3
     msw: latest
     prettier: 2.8.8
+    range-slider-package: "link:./range-slider-package"
     react: 18.2.0
     react-native: 0.74.4
     react-native-app-auth: ^8.0.0

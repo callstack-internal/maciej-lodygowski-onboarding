@@ -1,7 +1,7 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {ConicGradientView} from 'conic-gradient-package';
-import Slider from '@react-native-community/slider';
-import {useState} from 'react';
+import React, {useState} from 'react';
+import {RangeSliderView} from 'range-slider-package';
 
 export const ConicGradientScreen = () => {
   const colors = ['red', 'white', 'green'];
@@ -13,19 +13,14 @@ export const ConicGradientScreen = () => {
     <View style={styles.container}>
       <View />
       <View>
-        <Text>X Location {centerPointX.toFixed(2)}</Text>
-        <Slider
+        <RangeSliderView
+          leftKnobValue={centerPointX}
+          rightKnobValue={centerPointY}
           style={styles.slider}
-          value={centerPointX}
-          onValueChange={setCenterPointX}
-        />
-      </View>
-      <View>
-        <Text>Y Location: {centerPointY.toFixed(2)}</Text>
-        <Slider
-          style={styles.slider}
-          value={centerPointY}
-          onValueChange={setCenterPointY}
+          onRangeSliderViewEndDrag={e => {
+            setCenterPointY(e.nativeEvent.rightKnobValue);
+            setCenterPointX(e.nativeEvent.leftKnobValue);
+          }}
         />
       </View>
 
@@ -55,6 +50,7 @@ const styles = StyleSheet.create({
   },
   slider: {
     width: 300,
-    height: 10,
+    height: 40,
+    marginVertical: 10,
   },
 });
