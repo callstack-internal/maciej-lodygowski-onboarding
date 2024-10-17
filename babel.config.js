@@ -23,6 +23,7 @@ module.exports = {
           'app-info-package': './app-info-package',
           'conic-gradient-package': './conic-gradient-package',
           'save-file-picker-package': './save-file-picker-package',
+          'range-slider-package': './range-slider-package',
         },
       },
     ],

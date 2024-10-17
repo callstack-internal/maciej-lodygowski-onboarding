@@ -30,5 +30,8 @@ module.exports = {
     'save-file-picker-package': {
       root: path.resolve(__dirname, './save-file-picker-package'),
     },
+    'range-slider-package': {
+      root: path.resolve(__dirname, './range-slider-package'),
+    },
   },
 };

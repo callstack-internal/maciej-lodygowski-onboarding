@@ -7,12 +7,14 @@ import {AppInfoScreen} from '../screens/CustomModules/AppInfo.tsx';
 import React from 'react';
 import {ConicGradientScreen} from '../screens/CustomModules/ConicGradient.tsx';
 import {FileManagerScreen} from '../screens/CustomModules/FileManager.tsx';
+import {RangeSliderScreen} from '../screens/CustomModules/RangeSlider.tsx';
 
 export type ModulesStackParamList = {
   Index: undefined;
   AppInfo: undefined;
   ConicGradient: undefined;
   FileManager: undefined;
+  RangeSlider: undefined;
 };
 
 export type ModulesStackNavigationProps =
@@ -32,6 +34,7 @@ export const CustomModulesStack = () => {
         component={ConicGradientScreen}
       />
       <ModulesStack.Screen name="FileManager" component={FileManagerScreen} />
+      <ModulesStack.Screen name="RangeSlider" component={RangeSliderScreen} />
     </ModulesStack.Navigator>
   );
 };

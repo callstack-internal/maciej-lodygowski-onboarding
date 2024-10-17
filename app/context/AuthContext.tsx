@@ -6,6 +6,7 @@ import React, {
   useState,
 } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {IS_AUTOMATION} from '@env';
 
 export interface IAuthContext {
   isLoggedIn: boolean;
@@ -20,7 +21,7 @@ export const AuthContext = createContext<IAuthContext>({
 });
 
 export const AuthProvider = ({children}: PropsWithChildren) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(IS_AUTOMATION);
 
   useEffect(() => {
     (async () => {

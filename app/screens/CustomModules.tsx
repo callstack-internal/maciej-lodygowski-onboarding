@@ -20,6 +20,10 @@ export const CustomModulesScreen = () => {
         onPress={() => navigation.navigate('FileManager')}
         title="File manager"
       />
+      <NavigationButton
+        onPress={() => navigation.navigate('RangeSlider')}
+        title="Range slider"
+      />
     </View>
   );
 };
