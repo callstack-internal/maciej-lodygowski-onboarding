@@ -65,6 +65,7 @@ jobs:
           echo "OPEN_WEATHER_API_KEY=${{ secrets.OPEN_WEATHER_API_KEY }}" >> .env
           echo "API_URL=${{ secrets.API_URL }}" >> .env
           echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> .env
+          echo "IS_AUTOMATION=true" >> .env
 
       - name: Create local.properties file
         run: |
