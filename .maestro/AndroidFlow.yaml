@@ -1,10 +1,11 @@
 appId: com.weather_app
 ---
+- clearState: com.weather_app
 - launchApp
 - tapOn:
     id: "kyiv"
 - assertVisible: "Kyiv"
-- tapOn: "Weather"
+- tapOn: "Navigate up"
 - tapOn:
     id: "search"
 - inputText: "Wroc"
