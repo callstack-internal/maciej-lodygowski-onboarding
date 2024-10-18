@@ -1,79 +1,89 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Weather App
 
-# Getting Started
+Welcome to **Weather App**, a showcase application demonstrating the integration and use of custom modules and OpenMobileHub (OMH) packages in a React Native environment. This application highlights the capabilities of OMH modules, including maps and authentication, as well as custom components and plugins specifically designed for React Native.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Packages Used](#packages-used)
+- [License](#license)
 
-## Step 1: Start the Metro Server
+## Features
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- **Custom Modules**: Explore various custom components such as range sliders, conic gradients, and save-file pickers.
+- **OpenMobileHub (OMH) Integrations**:
+   - **Maps Integration**: Provides support for multiple map providers like Google Maps and OpenStreetMap using `@openmobilehub/maps-core`.
+   - **Authentication**: Supports Google authentication via `@openmobilehub/auth-google`.
+   - **Storage Solutions**: Integrates with Google Drive storage for seamless data management.
+- **React Native Essentials**: Built with popular libraries and components for optimized cross-platform performance on iOS and Android.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Requirements
 
+- **Node.js**: >= 18
+- **Yarn**: >= 4.0.2
+- **Xcode** (for iOS development)
+- **Android Studio** (for Android development)
+
+## Getting Started
+
+### Clone the Repository
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/your-username/weather_app.git
+cd weather_app
+yarn install
 ```
 
-## Step 2: Start your Application
+### Configure Environment Variables
+This project uses environment variables for configuration. Create a .env file in the root of the project, and set any required environment variables (e.g., API keys, configuration options).
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+### Run the Application
+To launch the app on an Android emulator or iOS simulator:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
+#android
 yarn android
-```
 
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
+#ios
 yarn ios
 ```
+### Running tests
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+```bash
+yarn test
+```
+### Scripts
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Here are some of the key scripts defined in the package.json:
 
-## Step 3: Modifying your App
+	•	yarn android: Run the app on an Android emulator.
+	•	yarn ios: Run the app on an iOS simulator.
+	•	yarn lint: Run ESLint for code quality checks.
+	•	yarn start: Start the Metro bundler for React Native.
+	•	yarn build:android and yarn build:ios: Build the app for production using Fastlane.
+	•	yarn codegen:android and yarn codegen:ios: Generate code artifacts from schema files for Android and iOS.
 
-Now that you have successfully run the app, let's modify it.
+### Packages used
+This app includes both core dependencies and custom packages that enhance functionality:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+#### Core OMH Packages
+- **Authentication**: @openmobilehub/auth-core, @openmobilehub/auth-google
+	- **Maps: @openmobilehub/maps-core, @openmobilehub/maps-plugin-googlemaps, @openmobilehub/maps-plugin-openstreetmap
+	•	Storage: @openmobilehub/storage-core, @openmobilehub/storage-googledrive
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+#### Custom and Linked Packages
 
-## Congratulations! :tada:
+	•	Custom UI Components: conic-gradient-package, range-slider-package
+	•	Native Integrations: app-info-package, save-file-picker-package, react-native-expose-location
 
-You've successfully run and modified your React Native App. :partying_face:
+#### Additional Libraries
 
-### Now what?
+	•	React Navigation: For app navigation and routing.
+	•	React Query: For data fetching and caching.
+	•	Lottie: For animations.
+	•	Testing: Jest, Testing Library, and MSW (Mock Service Worker) for a comprehensive testing setup.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### License
 
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License.
